@@ -4,9 +4,9 @@ services:
     image: haproxy:latest
     container_name: haproxy
     ports:
-      - "80:80"  # Port 80 trên máy host sẽ trỏ đến port 80 của container HAProxy
+      - "80:80"  # Port 80  container HAProxy
     volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg  # Mount file cấu hình HAProxy
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg  #  HAProxy
     networks:
       - lb-net
   server1:
